@@ -1,0 +1,15 @@
+{
+  "name": "nginx-log-monitoring",
+  "version": "1.0.0",
+  "description": "This service responsible for monitoring nginx log file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:D1S1G4CodeLovers/nginx-log-monitoring.git"
+  },
+  "author": "gmt_team",
+  "license": "ISC"
+}
