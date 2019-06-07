@@ -13,9 +13,23 @@ $ npm install
 $ npm run test
 ```
 
+Copy sh/env.example.sh to sh/env.sh.
+
+```
+$ cd <project_dir>
+$ cp env.example.sh env.sh
+```
+
+Edit file env.sh by yourself and run command below to initialization environment variable.
+
+```
+$ cd <project_dir>
+$ source sh/env.sh
+```
+
 Run project
 
 ```
 $ cd <project_dir>
-$ node index.js
+$ node src/index.js
 ```
