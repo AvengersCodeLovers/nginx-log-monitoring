@@ -11,25 +11,25 @@ class WatchingFile extends EventEmitter {
   }
 
   /**
-   * Listen file change
+   * Listen when a log file has been added
    * @param {string} targetDir folder to watching
    */
-  listenFileChange (targetDir) {
+  listenErrorLogging (targetDir) {
     try {
       log(`Watching for file changes on ${targetDir}`);
 
       const watcher = chokidar.watch(targetDir, {persistent: true});
 
       watcher.on("add", async (path) => {
-        if (path.includes("error.log")) {
-          log(`File ${path} has been added.`);
+        if (path.includes("error.log") || path.includes("mysql_error.log")) {
+          log(`[${new Date().toLocaleString()}] File ${path} has been added.`);
           let logData = await fsExtra.readFile(path);
 
-          log(`Push alert message to chatwork...`);
+          log(`[${new Date().toLocaleString()}] Push alert message to chatwork...`);
           this.emit("new-error-file-added", {message: logData.toString()});
 
           await fsExtra.unlink(path);
-          log(`File ${path} has been removed.`);
+          log(`[${new Date().toLocaleString()}] File ${path} has been removed.`);
         }
       });
     } catch (error) {
