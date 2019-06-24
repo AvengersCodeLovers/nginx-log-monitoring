@@ -4,7 +4,7 @@ const querystring = require("querystring");
 
 let cwApiUrl = process.env.CW_API_URL;
 let cwBotToken = process.env.CW_BOT_TOKEN;
-let log = console.log.bind(console);
+let debug = console.log.bind(console);
 
 class ConfigAxios {
   /**
@@ -33,7 +33,7 @@ class ConfigAxios {
       let axiosInstance = await this.initAxiosInstance(cwApiUrl, cwBotToken);
       return await axiosInstance.post(`/rooms/${cwRoomId}/messages`, querystring.stringify({body: message}));
     } catch (error) {
-      log(error.message);
+      debug(error.message);
     }
   };
 }

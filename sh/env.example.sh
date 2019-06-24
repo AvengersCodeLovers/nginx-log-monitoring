@@ -1,7 +1,10 @@
 #!/bin/bash
 ### This shell script is for setting environmnent variables
-export NGINX_LOG_DIRECTORY=***
-export MYSQL_LOG_DIRECTORY=***
+export NGINX_LOG_FILE=***
+export MYSQL_LOG_FILE=***
+
+export NGINX_TYPE=***
+export MYSQL_TYPE=***
 
 export ENV=***
 export MANAGERS=***
