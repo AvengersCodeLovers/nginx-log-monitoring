@@ -3,9 +3,6 @@
 export NGINX_LOG_FILE=***
 export MYSQL_LOG_FILE=***
 
-export NGINX_TYPE=***
-export MYSQL_TYPE=***
-
 export ENV=***
 export MANAGERS=***
 
