@@ -13,7 +13,7 @@
   "author": "gmt_team",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "chokidar": "^3.0.1",
     "fs-extra": "^8.0.1",
     "querystring": "^0.2.0",
